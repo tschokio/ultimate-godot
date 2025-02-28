@@ -25,6 +25,9 @@ func _process(_delta: float) -> void:
 	if Input.is_action_pressed("primary action") and can_laser:
 		var laser_markers = $LaserStartPositions.get_children()
 		var selected_laser = laser_markers[randi() % laser_markers.size()]
+
+		# trigger the laser
+		$LaserShotParticle.restart()
 		can_laser = false
 		$LaserTimer.start()
 		

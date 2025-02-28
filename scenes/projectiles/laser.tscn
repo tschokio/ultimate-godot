@@ -8,6 +8,8 @@ radius = 6.0
 height = 82.0
 
 [node name="Laser" type="Area2D"]
+collision_layer = 8
+collision_mask = 7
 script = ExtResource("1_phjv1")
 speed = 2000
 
