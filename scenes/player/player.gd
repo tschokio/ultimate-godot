@@ -6,6 +6,10 @@ signal player_grenade_shot_signal(pos, direction)
 var can_laser: bool = true
 var can_grenade: bool = true
 # Called when the node enters the scene tree for the first time.
+
+@export var max_speed: int = 500
+var speed: int = max_speed
+
 func _ready() -> void:
 	pass # Replace with function body.
 
@@ -17,7 +21,7 @@ func _process(_delta: float) -> void:
 	
 	# input
 	var direction = Input.get_vector("left", "right", "up", "down")
-	velocity = direction * 500 
+	velocity = direction * speed
 	move_and_slide()
 	
 	var player_direction = (get_global_mouse_position() - position).normalized()
