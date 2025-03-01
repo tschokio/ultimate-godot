@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dp0gcwbd5nd18" path="res://scenes/objects/wall_lamp.tscn" id="3_3l6n8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j8j3l"]
-size = Vector2(3264, 2493)
+size = Vector2(3037, 2264)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2tpki"]
 resource_name = "floors"
@@ -224,7 +224,7 @@ collision_layer = 16
 script = ExtResource("1_74w4k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(202, 196.5)
+position = Vector2(207.5, 223)
 shape = SubResource("RectangleShape2D_j8j3l")
 
 [node name="TileMap" type="TileMap" parent="."]

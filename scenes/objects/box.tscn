@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://ti2s6b5b67ld"]
+
+[ext_resource type="PackedScene" uid="uid://d3dv6hqtogbc" path="res://scenes/objects/item_container_scene.tscn" id="1_cgyl7"]
+[ext_resource type="Script" path="res://scenes/objects/box.gd" id="2_mulcn"]
+[ext_resource type="Texture2D" uid="uid://vc6126kymuig" path="res://graphics/objects/box/base.png" id="3_k2l0w"]
+[ext_resource type="Texture2D" uid="uid://b4nt6dugvdtf7" path="res://graphics/objects/box/lid.png" id="4_ci8f5"]
+
+[node name="box" instance=ExtResource("1_cgyl7")]
+script = ExtResource("2_mulcn")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_k2l0w")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
+position = Vector2(0, 5)
+texture = ExtResource("4_ci8f5")
+
+[node name="CollisionPolygon2D" parent="." index="2"]
+position = Vector2(-4, -37)
+polygon = PackedVector2Array(-195, 116, -181, 128, 156, 127, 168, 126, 194, 126, 204, 110, 208, -29, 196, -42, 182, -51, -162, -49, -180, -51, -195, -36)
