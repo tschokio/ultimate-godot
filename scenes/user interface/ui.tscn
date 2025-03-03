@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://jtbgcp203tpd"]
+
+[ext_resource type="Theme" uid="uid://bfksi3xnngau6" path="res://scenes/user interface/main_theme.tres" id="1_n88ps"]
+[ext_resource type="Texture2D" uid="uid://ca2eo3bqmu4wu" path="res://graphics/ui/bullet.png" id="1_vocfq"]
+[ext_resource type="Texture2D" uid="uid://bxcn3waod1hpn" path="res://graphics/ui/grenade.png" id="2_fuxd0"]
+[ext_resource type="Texture2D" uid="uid://b1dmeagd3mgqg" path="res://graphics/ui/progress_bar/bg.png" id="4_haq6x"]
+[ext_resource type="Texture2D" uid="uid://b7bi6hlvhtdt1" path="res://graphics/ui/progress_bar/progress.png" id="6_yfe6g"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="LaserCounter" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.01
+anchor_top = 0.9
+anchor_right = 0.01
+anchor_bottom = 0.92
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LaserCounter"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="LaserCounter/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_n88ps")
+text = "20"
+
+[node name="TextureRect" type="TextureRect" parent="LaserCounter/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_vocfq")
+expand_mode = 4
+
+[node name="GrenadeCounter" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.06
+anchor_top = 0.9
+anchor_right = 0.068
+anchor_bottom = 0.96
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GrenadeCounter"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="GrenadeCounter/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_n88ps")
+text = "5
+"
+
+[node name="TextureRect" type="TextureRect" parent="GrenadeCounter/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_fuxd0")
+expand_mode = 4
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.998
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -40.0
+offset_right = 150.0
+grow_horizontal = 2
+grow_vertical = 0
+value = 80.0
+texture_under = ExtResource("4_haq6x")
+texture_progress = ExtResource("6_yfe6g")
