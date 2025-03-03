@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://bh7hug11n3lkc"]
 
 [ext_resource type="PackedScene" uid="uid://b0cy5fmubc4st" path="res://scenes/levels/level.tscn" id="1_qxf5g"]
-[ext_resource type="Script" path="res://scenes/levels/outside.gd" id="2_hf006"]
+[ext_resource type="Script" uid="uid://btvft4fnsy6h5" path="res://scenes/levels/outside.gd" id="2_hf006"]
 [ext_resource type="PackedScene" uid="uid://dv1slmvsbd7t6" path="res://scenes/objects/gate.tscn" id="2_jd3o3"]
 [ext_resource type="Texture2D" uid="uid://t0ptms7nascx" path="res://graphics/ground/stones.png" id="2_rb30b"]
 [ext_resource type="Texture2D" uid="uid://balghu2pjfrnv" path="res://graphics/decals/dirt_patch.png" id="3_vio04"]

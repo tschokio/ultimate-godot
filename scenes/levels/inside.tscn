@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b0cy5fmubc4st" path="res://scenes/levels/level.tscn" id="1_hfes0"]
 [ext_resource type="TileSet" uid="uid://di3kgndqklplc" path="res://scenes/levels/house.tres" id="2_714w1"]
-[ext_resource type="Script" path="res://scenes/levels/inside.gd" id="2_j71ju"]
+[ext_resource type="Script" uid="uid://2bu838ohvvc3" path="res://scenes/levels/inside.gd" id="2_j71ju"]
 [ext_resource type="Texture2D" uid="uid://b4x8ihugqn8j5" path="res://graphics/ground/dirt.png" id="3_k3e7h"]
 [ext_resource type="PackedScene" uid="uid://duq3qpog1owga" path="res://scenes/objects/toilet.tscn" id="3_knxc5"]
 [ext_resource type="PackedScene" uid="uid://bh7hug11n3lkc" path="res://scenes/levels/outside.tscn" id="3_uc5nb"]

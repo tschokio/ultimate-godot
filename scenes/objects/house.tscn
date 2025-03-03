@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ufx5dlg7tf5"]
 
-[ext_resource type="Script" path="res://scenes/objects/house.gd" id="1_74w4k"]
+[ext_resource type="Script" uid="uid://bs68wnlbw2r5k" path="res://scenes/objects/house.gd" id="1_74w4k"]
 [ext_resource type="PackedScene" uid="uid://iq4sq8eso1wp" path="res://scenes/objects/simple_light.tscn" id="2_084d0"]
 [ext_resource type="TileSet" uid="uid://di3kgndqklplc" path="res://scenes/levels/house.tres" id="2_qybgf"]
 [ext_resource type="PackedScene" uid="uid://dp0gcwbd5nd18" path="res://scenes/objects/wall_lamp.tscn" id="3_3l6n8"]

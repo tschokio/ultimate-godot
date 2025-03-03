@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3dv6hqtogbc"]
 
-[ext_resource type="Script" path="res://scenes/objects/item_container_scene.gd" id="1_brpbs"]
+[ext_resource type="Script" uid="uid://88kisxvhgh58" path="res://scenes/objects/item_container_scene.gd" id="1_brpbs"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_whire"]
 

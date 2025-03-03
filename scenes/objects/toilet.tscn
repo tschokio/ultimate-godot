@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d3dv6hqtogbc" path="res://scenes/objects/item_container_scene.tscn" id="1_nsggo"]
 [ext_resource type="Texture2D" uid="uid://b0komurof1wt5" path="res://graphics/objects/toilet.png" id="2_hxi6o"]
-[ext_resource type="Script" path="res://scenes/objects/toilet.gd" id="2_pcvu0"]
+[ext_resource type="Script" uid="uid://chjpnh7udcm6v" path="res://scenes/objects/toilet.gd" id="2_pcvu0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8a7ju"]
 
