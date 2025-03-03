@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://jtbgcp203tpd"]
+[gd_scene load_steps=7 format=3 uid="uid://jtbgcp203tpd"]
 
 [ext_resource type="Theme" uid="uid://bfksi3xnngau6" path="res://scenes/user interface/main_theme.tres" id="1_n88ps"]
 [ext_resource type="Texture2D" uid="uid://ca2eo3bqmu4wu" path="res://graphics/ui/bullet.png" id="1_vocfq"]
+[ext_resource type="Script" uid="uid://cv3pkkaucqn05" path="res://scenes/user interface/ui.gd" id="1_x14l5"]
 [ext_resource type="Texture2D" uid="uid://bxcn3waod1hpn" path="res://graphics/ui/grenade.png" id="2_fuxd0"]
 [ext_resource type="Texture2D" uid="uid://b1dmeagd3mgqg" path="res://graphics/ui/progress_bar/bg.png" id="4_haq6x"]
 [ext_resource type="Texture2D" uid="uid://b7bi6hlvhtdt1" path="res://graphics/ui/progress_bar/progress.png" id="6_yfe6g"]
 
 [node name="UI" type="CanvasLayer"]
+script = ExtResource("1_x14l5")
 
 [node name="LaserCounter" type="Control" parent="."]
 layout_mode = 3
@@ -36,9 +38,9 @@ expand_mode = 4
 [node name="GrenadeCounter" type="Control" parent="."]
 layout_mode = 3
 anchor_left = 0.06
-anchor_top = 0.9
+anchor_top = 0.929
 anchor_right = 0.068
-anchor_bottom = 0.96
+anchor_bottom = 0.93
 offset_right = 40.0
 offset_bottom = 40.0
 
@@ -47,6 +49,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -20.7
+offset_right = -1.14441e-05
+offset_bottom = 20.7
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -54,6 +59,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_n88ps")
+theme_override_constants/line_spacing = -25
 text = "5
 "
 
@@ -62,10 +68,10 @@ layout_mode = 2
 texture = ExtResource("2_fuxd0")
 expand_mode = 4
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-anchors_preset = -1
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.998
+anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -150.0
@@ -73,6 +79,10 @@ offset_top = -40.0
 offset_right = 150.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer"]
+layout_mode = 2
 value = 80.0
 texture_under = ExtResource("4_haq6x")
 texture_progress = ExtResource("6_yfe6g")

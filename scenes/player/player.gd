@@ -11,7 +11,7 @@ var can_grenade: bool = true
 var speed: int = max_speed
 
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -26,7 +26,8 @@ func _process(_delta: float) -> void:
 	
 	var player_direction = (get_global_mouse_position() - position).normalized()
 	# laser shooting input
-	if Input.is_action_pressed("primary action") and can_laser:
+	if Input.is_action_pressed("primary action") and can_laser and Globals.laser_amount > 0:
+		Globals.laser_amount -= 1
 		var laser_markers = $LaserStartPositions.get_children()
 		var selected_laser = laser_markers[randi() % laser_markers.size()]
 
@@ -38,7 +39,8 @@ func _process(_delta: float) -> void:
 		# emit the position we selected
 		player_laser_shot_signal.emit(selected_laser.global_position, player_direction)
 		
-	if Input.is_action_pressed("second action") and can_grenade:
+	if Input.is_action_pressed("second action") and can_grenade and Globals.grenade_amount > 0:
+		Globals.grenade_amount -= 1
 		var grenade_markers = $GrenadeStartPositions.get_children()
 		var selected_grenades = grenade_markers[randi() % grenade_markers.size()]
 		can_grenade = false
