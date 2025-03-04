@@ -11,8 +11,6 @@ func _process(_delta):
 	pass
 		
 
-
-
 func _on_player_player_laser_shot_signal(pos, direction) -> void:
 	var laser = laser_scene.instantiate() as Area2D
 	laser.position = pos
@@ -39,3 +37,8 @@ func _on_house_player_entered() -> void:
 func _on_house_player_exited() -> void:
 	var tween = get_tree().create_tween()
 	tween.tween_property($Player/Camera2D, "zoom", Vector2(0.6,0.6), 1).set_trans(Tween.TRANS_CIRC)
+
+
+func _on_player_update_stats() -> void:
+	$UI.update_laser_text()
+	$UI.update_grenade_text()
