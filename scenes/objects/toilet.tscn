@@ -1,17 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://duq3qpog1owga"]
+[gd_scene load_steps=6 format=3 uid="uid://duq3qpog1owga"]
 
 [ext_resource type="PackedScene" uid="uid://d3dv6hqtogbc" path="res://scenes/objects/item_container_scene.tscn" id="1_nsggo"]
 [ext_resource type="Texture2D" uid="uid://b0komurof1wt5" path="res://graphics/objects/toilet.png" id="2_hxi6o"]
 [ext_resource type="Script" uid="uid://chjpnh7udcm6v" path="res://scenes/objects/toilet.gd" id="2_pcvu0"]
+[ext_resource type="Texture2D" uid="uid://l37dxnf6x7uk" path="res://graphics/objects/lid.png" id="4_2asns"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8a7ju"]
 
 [node name="toilet" instance=ExtResource("1_nsggo")]
+scale = Vector2(0.8, 0.8)
 physics_material_override = SubResource("PhysicsMaterial_8a7ju")
 script = ExtResource("2_pcvu0")
 
-[node name="Sprite2D" parent="." index="0"]
+[node name="BaseSprite" parent="." index="0"]
 texture = ExtResource("2_hxi6o")
 
-[node name="CollisionPolygon2D" parent="." index="1"]
+[node name="LidSprite" parent="." index="1"]
+position = Vector2(0, 15)
+texture = ExtResource("4_2asns")
+
+[node name="CollisionPolygon2D" parent="." index="2"]
 polygon = PackedVector2Array(-1, 124, 42, 107, 63, 79, 88, 40, 104, -8, 98, -44, 91, -58, 108, -61, 114, -69, 118, -84, 115, -102, 107, -112, 98, -117, 93, -124, 64, -123, -92, -121, -98, -112, -116, -105, -117, -85, -114, -65, -105, -59, -88, -59, -98, -38, -101, -4, -94, 28, -72, 65, -38, 105, -18, 121)
+
+[node name="Marker2D" type="Marker2D" parent="SpawnPositions" index="0"]

@@ -1,12 +1,5 @@
 extends LevelParent
 
-func _ready():
-	pass
-		
-func _process(_delta):
-	pass
-
-
 func _on_light_timer_timeout() -> void:
 	var tween = create_tween()
 	tween.set_parallel(false)

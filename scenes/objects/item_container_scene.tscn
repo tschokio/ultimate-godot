@@ -4,12 +4,16 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_whire"]
 
-[node name="ItemContainerScene" type="StaticBody2D"]
+[node name="ItemContainerScene" type="StaticBody2D" groups=["Container"]]
 collision_layer = 4
 collision_mask = 11
 physics_material_override = SubResource("PhysicsMaterial_whire")
 script = ExtResource("1_brpbs")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="BaseSprite" type="Sprite2D" parent="."]
+
+[node name="LidSprite" type="Sprite2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+[node name="SpawnPositions" type="Node2D" parent="."]
