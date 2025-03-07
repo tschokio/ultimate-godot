@@ -270,10 +270,11 @@ shape = SubResource("RectangleShape2D_05713")
 [node name="Items" parent="." index="7"]
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." index="8"]
+[node name="Player" parent="." index="9"]
 position = Vector2(2727, 1019)
+max_speed = 500
 
-[node name="Lights" parent="." index="9"]
+[node name="Lights" parent="." index="10"]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 

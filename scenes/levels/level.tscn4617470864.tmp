@@ -21,6 +21,7 @@ script = ExtResource("1_qpekb")
 
 [node name="Player" parent="." instance=ExtResource("4_bdojq")]
 position = Vector2(-340, 1883)
+max_speed = null
 
 [node name="Lights" type="Node2D" parent="."]
 
